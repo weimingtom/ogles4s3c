@@ -1,0 +1,6 @@
+TOOLCHAINS=arm-linux-
+CC := $(TOOLCHAINS)gcc
+CXX := $(TOOLCHAINS)g++
+LD := $(TOOLCHAINS)ld
+AR := $(TOOLCHAINS)ar
+AS := $(TOOLCHAINS)as
