@@ -78,7 +78,7 @@ typedef int   EGLNativeDisplayType;
 typedef void *EGLNativeWindowType;
 typedef void *EGLNativePixmapType;
 
-#elif defined(__unix__)
+#elif defined(__unix__) && defined(X11)
 
 /* X11 (tentative)  */
 #include <X11/Xlib.h>
@@ -89,7 +89,9 @@ typedef Pixmap   EGLNativePixmapType;
 typedef Window   EGLNativeWindowType;
 
 #else
-#error "Platform not recognized"
+typedef int   EGLNativeDisplayType;
+typedef void *EGLNativeWindowType;
+typedef void *EGLNativePixmapType;
 #endif
 
 /* EGL 1.2 types, renamed for consistency in EGL 1.3 */
